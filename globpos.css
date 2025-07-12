@@ -1,0 +1,191 @@
+/* GlobPOS Page Specific Styles */
+.globpos-page h1,
+.globpos-page h2,
+.globpos-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.globpos-page #globpos-hero {
+    display: flex;
+    align-items: flex-start; /* Changed to flex-start to push content to the top */
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    min-height: 80vh;
+    background: url('restaurant-operations.png'); /* Removed linear-gradient from here */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    position: relative; /* Added for pseudo-element positioning */
+    padding-bottom: 6rem; /* Added padding to give space at the bottom */
+}
+
+/* Added a pseudo-element for the overlay with adjustable opacity */
+.globpos-page #globpos-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Adjusted opacity for better readability */
+    z-index: 0; /* Ensure overlay is behind content but above background image */
+}
+
+.globpos-page #globpos-hero .hero-content {
+    max-width: 800px;
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 1;
+}
+
+.globpos-page #globpos-hero .hero-tagline {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.globpos-page #globpos-hero .hero-subtitle {
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    color: #ffffff; /* Ensured text color is white */
+}
+
+.logo-display-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.globpos-logo-standalone {
+    height: 90px;
+    max-width: 300px;
+}
+
+.globpos-page #features {
+    background-color: #E0F5F7; /* Light teal background */
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Arranged into two columns */
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid var(--primary-color); /* Changed to primary-color (blue) */
+    text-align: center; /* Center content within the card */
+    display: flex; /* Use flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon, h3, p vertically */
+    align-items: center; /* Center horizontally in flex column */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.feature-card .feature-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-bottom: 1rem; /* Space between icon and heading */
+}
+
+.feature-card h3 {
+    color: var(--primary-color); /* Changed to primary-color (blue) */
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    font-size: 1rem; /* Ensure consistent paragraph size */
+}
+
+.feature-list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color); /* Changed to primary-color (blue) */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+}
+
+/* Hide navigation elements on the GlobPOS page */
+.globpos-page .navbar .nav-container .menu-toggle,
+.globpos-page .navbar .nav-container .nav-menu {
+    display: none;
+}
+
+.globpos-page .navbar .nav-container {
+    justify-content: space-between; /* Space out logos */
+    padding-right: 2rem; /* Add padding consistent with general layout */
+}
+
+/* Style for the FutureGlob logo link in GlobPOS header */
+.globpos-page .nav-link-futureglob-globpos {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.globpos-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .globpos-page #globpos-hero {
+        padding-bottom: 4rem; /* Adjust padding for mobile */
+    }
+
+    .globpos-page #globpos-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+    
+    .globpos-page #globpos-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .globpos-page .feature-grid {
+        grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+    }
+
+    /* Adjust nav-container for mobile to ensure FutureGlob logo is visible and positioned */
+    .globpos-page .navbar .nav-container {
+        justify-content: space-between; /* Keep space-between for mobile */
+        padding-right: 0;
+    }
+
+    .globpos-page .nav-link-futureglob-globpos {
+        padding: 0.5rem 1rem; /* Add some padding for touch target */
+    }
+}

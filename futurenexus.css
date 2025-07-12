@@ -1,0 +1,121 @@
+/* --- FutureGlob AISys Nexus Page Specific Styles --- */
+
+.nexus-page h1, .nexus-page h2, .nexus-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.nexus-page #nexus-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background-image: url('/nexus_bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.nexus-page #nexus-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+}
+
+.nexus-page #nexus-hero .hero-content {
+    max-width: 800px;
+    margin-top: 2rem;
+    z-index: 1;
+}
+
+.nexus-page #nexus-hero .hero-tagline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.nexus-page #nexus-hero .hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.nexus-page .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.nexus-page .capability-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+}
+
+.nexus-page .capability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.nexus-page .capability-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.nexus-page .feature-list { 
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.nexus-page .feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.nexus-page .feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.nexus-page .contact-form .nexus-cta { 
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.nexus-page .contact-form .nexus-cta:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .nexus-page .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nexus-page #nexus-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+    .nexus-page #nexus-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}

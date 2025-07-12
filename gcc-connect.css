@@ -1,0 +1,147 @@
+/* --- GCC Connect Page Specific Styles --- */
+
+.gcc-connect-page h1, .gcc-connect-page h2, .gcc-connect-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+/* Hide navigation elements on the GCC Connect page */
+.gcc-connect-page .navbar .nav-container .menu-toggle,
+.gcc-connect-page .navbar .nav-container .nav-menu {
+    display: none;
+}
+
+.gcc-connect-page .navbar .nav-container {
+    justify-content: space-between; /* Changed from center to space-between for left/right logos */
+}
+
+/* Style for the FutureGlob logo link in GCC Connect header */
+.gcc-connect-page .nav-link-futureglob-gcc {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.gcc-connect-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+.gcc-connect-page #globforce-hero {
+    /* This section now only defines the visual background and height */
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem 4rem; /* Adjusted padding to place content at the bottom */
+    min-height: 80vh;
+    background: url('/construction_worker_visa.png'); /* Removed gradient as hero-overlay handles it */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Text color for content inside hero */
+    position: relative; /* Needed for z-index of children */
+}
+
+.gcc-connect-page #globforce-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Gradient from transparent at top to dark at bottom for text readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1; /* Ensure overlay is above background image */
+}
+
+/* Styles for the new hero text content section */
+.gcc-connect-page #globforce-hero .hero-content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+    max-width: 800px;
+    width: 100%; /* Ensure it takes full width for centering */
+    margin-top: 2rem; /* Retain some top margin if needed, but flex-end will position it */
+    padding-bottom: 2rem; /* Add padding to lift text from the bottom edge */
+}
+
+.gcc-connect-page #globforce-hero .hero-tagline {
+    font-size: 3.5rem; /* Adjusted for being below hero, slightly smaller than main hero H1 */
+    font-weight: 700;
+    color: #ffffff; /* Use white color for text */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+}
+
+.gcc-connect-page #globforce-hero .hero-subtitle {
+    font-size: 1.4rem; /* Adjusted size */
+    line-height: 1.6;
+    color: #ffffff; /* Use white color for text */
+    font-weight: 400; /* Regular weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+    margin-top: 0; /* No extra margin */
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto; /* Center the max-width div */
+    margin-right: auto;
+}
+
+.gcc-connect-logo-standalone {
+    height: 90px;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.gcc-connect-page .feature-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid #00aaff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gcc-connect-page .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.gcc-connect-page .feature-card .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.gcc-connect-page .feature-card h3 {
+    color: #00aaff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.gcc-connect-page .feature-card p {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for the new hero-text-content on mobile */
+    .gcc-connect-page #globforce-hero .hero-tagline {
+        font-size: 2.5rem; /* Further reduce on mobile */
+    }
+
+    .gcc-connect-page #globforce-hero .hero-subtitle {
+        font-size: 1.2rem; /* Further reduce on mobile */
+    }
+
+    .gcc-connect-page .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

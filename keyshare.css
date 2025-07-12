@@ -1,0 +1,183 @@
+/* --- KeyShare Page Specific Styles --- */
+
+.keyshare-page h1,
+.keyshare-page h2,
+.keyshare-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+/* Hide navigation elements on the KeyShare page */
+.keyshare-page .navbar .nav-container .menu-toggle,
+.keyshare-page .navbar .nav-container .nav-menu {
+    display: none;
+}
+
+.keyshare-page .navbar .nav-container {
+    justify-content: space-between; /* Changed from center to space-between for left/right logos */
+    padding-right: 2rem; /* Add padding consistent with general layout */
+}
+
+/* Style for the FutureGlob logo link in KeyShare header */
+.keyshare-page .nav-link-futureglob-keyshare {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.keyshare-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+/* Ensure the header always has the default background and border from style.css */
+.keyshare-page header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.keyshare-page #keyshare-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('/keyshare_hero_bg_rental.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem 2rem 3rem; /* Reduced bottom padding from 4rem to 3rem */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px; /* Account for fixed header height */
+}
+
+.keyshare-page #keyshare-hero .hero-tagline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.keyshare-page #keyshare-hero .hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white; /* Ensure subtitle text is white */
+}
+
+/* Specific styling for the KeyShare logo section to control its spacing */
+.keyshare-page #keyshare-logo-section-wrapper {
+    padding: 0; /* Remove default section padding */
+    margin-top: 1rem; /* Sets a 1rem gap from the hero section */
+    margin-bottom: 0; /* Adjusted to 0 for closer proximity to next section */
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.keyshare-page .logo-display-container {
+    padding: 0; /* Remove padding from inside container, now handled by the section wrapper */
+}
+
+.keyshare-page .logo-display-container img {
+    height: 90px;
+    max-width: 300px;
+    margin: 0 auto; /* Explicitly center the logo image */
+    display: block; /* Makes auto margins work */
+}
+
+/* Feature grid and card styles for KeyShare */
+.keyshare-page .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem; /* Reduced from 3rem */
+}
+
+.keyshare-page .feature-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid #6f42c1; /* KeyShare brand color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.keyshare-page .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.keyshare-page .feature-card .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.keyshare-page .feature-card h3 {
+    color: #6f42c1; /* KeyShare brand color */
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.keyshare-page .feature-card p {
+    font-size: 1rem;
+}
+
+/* Reduce spacing between sections on KeyShare page */
+.keyshare-page section {
+    padding: 2.5rem 0; /* Reduced from 3rem to 2.5rem */
+}
+
+/* Specific adjustment for overview section's top margin now that it follows the logo section */
+.keyshare-page #overview {
+    padding-top: 1rem; /* Adjusted for tighter spacing from logo */
+    margin-top: 0; /* Ensure no extra top margin from generic container rules */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .keyshare-page #keyshare-hero {
+        margin-top: 60px; /* Adjust for mobile header height */
+        padding: 8rem 2rem 2rem; /* Further reduced bottom padding for mobile */
+    }
+
+    .keyshare-page #keyshare-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+
+    .keyshare-page #keyshare-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .keyshare-page .feature-grid {
+        grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+    }
+
+    /* Adjust nav-container for mobile to ensure FutureGlob logo is visible and positioned */
+    .keyshare-page .navbar .nav-container {
+        justify-content: space-between; /* Keep space-between for mobile */
+        padding-right: 0;
+    }
+
+    .keyshare-page .nav-link-futureglob-keyshare {
+        padding: 0.5rem 1rem; /* Add some padding for touch target */
+    }
+
+    .keyshare-page section {
+        padding: 2rem 0; /* Further reduced padding on mobile */
+    }
+
+    .keyshare-page #keyshare-logo-section-wrapper {
+        margin-top: 0.5rem; /* Adjust gap for mobile */
+        margin-bottom: 0; /* Adjusted for tighter spacing on mobile */
+    }
+
+    .keyshare-page #overview {
+        padding-top: 0.5rem; /* Further adjusted for tighter spacing from logo on mobile */
+    }
+}

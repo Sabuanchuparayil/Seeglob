@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeglob Business Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js" crossorigin="anonymous" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
+          "dompurify": "https://cdn.jsdelivr.net/npm/dompurify/dist/purify.es.min.js"
+        }
+      }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">
+                    <img src="/seegloblogo.png" alt="Seeglob Logo">
+                </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/#hero" class="nav-link">Home</a></li>
+                    <li><a href="/#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="/#products" class="nav-link nav-link-dropdown">Solutions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/globforce.html">GlobForce</a></li>
+                            <li><a href="/ontime.html">OnTime</a></li>
+                            <li><a href="/gcc-connect.html">GCC Connect</a></li>
+                            <li><a href="/globpos.html">GlobPOS</a></li>
+                            <li><a href="/keyshare.html">KeyShare</a></li>
+                            <li><a href="/idaglob.html">IdaGlob</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/futurenexus.html" class="nav-link">
+                            <img src="/FutureglobLogo.png" alt="FutureGlob Logo" class="nav-futureglob-logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div id="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-tagline">Driving Business Evolution with Intelligent Technology</h1>
+                <p class="hero-subtitle">Innovative solutions for HR, Hospitality, Real Estate, and Tourism.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2300+</span>
+                        <span class="stat-label">B2B Clients Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Core Industries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Global Offices</span>
+                    </div>
+                </div>
+                <div class="hero-cta-group">
+                    <a href="/futurenexus.html" class="cta-button">
+                        <span>Explore</span>
+                        <img src="/FutureglobLogo.png" alt="FutureGlob Logo" class="cta-futureglob-logo">
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>A Timeline of Innovation</h2>
+                <div class="timeline-infographic">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Company Founded</h3>
+                            <p>Seeglob is established with a vision to provide cutting-edge business solutions.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>E-commerce Focus</h3>
+                            <p>Expanded services with a strategic focus on e-commerce integration, partnering with Grozeo.com.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Technology Shift</h3>
+                            <p>Pivoted to a technology-first approach, launching the FutureGlob AISys Nexus department.</p>
+                        </div>
+                    </div>
+             </section>
+
+        <section id="products">
+            <div class="container">
+                <h2>Our Product Portfolio</h2>
+                <p class="section-subtitle">Innovative solutions designed to streamline operations across multiple industries.</p>
+                <div class="product-grid">
+                    <div class="product-card" id="product-globforce">
+                        <img src="/Globforcelogo.svg" alt="GlobForce Logo" class="product-logo">
+                        <p>Comprehensive HRMS and Field Staff solutions for large-scale resource management.</p>
+                        <ul class="features-list">
+                            <li>Resource Management</li>
+                            <li>Field Force Automation</li>
+                            <li>HRMS & Payroll</li>
+                            <li>Internal Communication</li>
+                        </ul>
+                        <a href="globforce.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                    <div class="product-card" id="product-globpos">
+                        <img src="/Globposlogo.svg" alt="GlobPOS Logo" class="product-logo">
+                        <p>Centralized hospitality solutions for seamless restaurant and inventory management.</p>
+                        <ul class="features-list">
+                            <li>Centralized POS</li>
+                            <li>Inventory Management</li>
+                            <li>Real-time Analytics</li>
+                            <li>Customer Loyalty</li>
+                        </ul>
+                        <a href="globpos.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                    <div class="product-card" id="product-ontime">
+                        <img src="/Ontime vector.svg" alt="OnTime Logo" class="product-logo">
+                        <p>Optimize field operations with real-time tracking, task management, and communication for mobile workforces.</p>
+                        <ul class="features-list">
+                            <li>Real-time GPS Tracking</li>
+                            <li>Task Management</li>
+                            <li>Time & Attendance</li>
+                            <li>Digital Forms</li>
+                        </ul>
+                        <a href="ontime.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                    <div class="product-card" id="product-gcc-connect">
+                        <img src="/GCC Connectlog vector.svg" alt="GCC Connect Logo" class="product-logo">
+                        <p>A comprehensive internal communications and HR services platform designed to create a more connected, efficient, and family-like workplace culture.</p>
+                        <ul class="features-list">
+                            <li>Centralised Hub for Communication & HR</li>
+                            <li>Automated Employee Document Management</li>
+                            <li>Integrated Training & Development Tools</li>
+                            <li>Advanced Ticketing & Support System</li>
+                        </ul>
+                        <a href="gcc-connect.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                    <div class="product-card" id="product-keyshare">
+                        <img src="/Keysharelogo.svg" alt="KeyShare Logo" class="product-logo">
+                        <p>Streamline operations and enhance tenant relations with smart property management for agents, caretakers, and owners.</p>
+                        <ul class="features-list">
+                            <li>Centralized Portfolio Management</li>
+                            <li>Tenant & Owner Self-Service Portals</li>
+                            <li>Automated Rent & Financial Tracking</li>
+                            <li>Secure Document & Lease Management</li>
+                        </ul>
+                        <a href="/keyshare.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                    <div class="product-card" id="product-idaglob">
+                        <img src="/Idagloblogo.svg" alt="IdaGlob Logo" class="product-logo">
+                        <p>A global travel marketplace empowering tour agents to share and distribute itineraries.</p>
+                        <ul class="features-list">
+                            <li>Itinerary Marketplace</li>
+                            <li>Intelligent Distribution</li>
+                            <li>Agent Empowerment</li>
+                            <li>Global Reach</li>
+                        </ul>
+                        <a href="idaglob.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adding new Transform Your Business section -->
+        <section id="transform-business">
+            <div class="container">
+                <div class="transform-card">
+                    <h2 class="transform-title">Ready to Transform Your Business?</h2>
+                    <p class="transform-subtitle">Join over 2300 businesses that trust Seeglob for their digital transformation journey</p>
+                    <div class="transform-buttons">
+                        <button type="button" class="cta-button" id="openContactModal">Start Your Journey</button>
+                        <a href="/#products" class="cta-button outline-button">View All Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pop-up Contact Modal Structure -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <h2>Get in Touch</h2>
+            <form class="global-contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button" data-original-text="Send Message">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                
+            </div>
+            
+            <div class="footer-separator"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2024 Seeglob Business Solutions. All Rights Reserved.
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

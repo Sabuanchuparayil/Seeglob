@@ -1,0 +1,195 @@
+/* --- IdaGlob Page Specific Styles --- */
+
+.idaglob-page h1,
+.idaglob-page h2,
+.idaglob-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+/* Hide navigation elements on the IdaGlob page */
+.idaglob-page .navbar .nav-container .menu-toggle,
+.idaglob-page .navbar .nav-container .nav-menu {
+    display: none;
+}
+
+.idaglob-page .navbar .nav-container {
+    justify-content: space-between; /* Changed from center to space-between for left/right logos */
+    padding-right: 2rem; /* Add padding consistent with general layout */
+}
+
+/* Style for the FutureGlob logo link in IdaGlob header */
+.idaglob-page .nav-link-futureglob-idaglob {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.idaglob-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+/* Ensure the header always has the default background and border from style.css */
+.idaglob-page header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.idaglob-page #idaglob-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    min-height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('idaglob-hero-bg.png'); /* Changed background image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    margin-top: 70px; /* Account for fixed header height */
+}
+
+.idaglob-page #idaglob-hero .hero-content {
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+.idaglob-page #idaglob-hero .hero-tagline {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.idaglob-page #idaglob-hero .hero-subtitle {
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+    color: #fff;
+}
+
+.logo-display-container {
+    text-align: center;
+    padding: 0; /* Remove padding here, will control via section */
+    margin-top: 1rem; /* Adjust gap from hero section */
+}
+
+.idaglob-logo-standalone {
+    height: 90px;
+    max-width: 300px;
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Makes auto margins work */
+}
+
+/* Reduce spacing between sections on IdaGlob page */
+.idaglob-page section {
+    padding: 2.5rem 0; /* Reduced from 4rem to 2.5rem */
+}
+
+/* Specific adjustment for overview section's top margin now that it follows the logo section */
+.idaglob-page #overview {
+    padding-top: 1rem; /* Adjusted for tighter spacing from logo */
+    margin-top: 0; /* Ensure no extra top margin from generic container rules */
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem; /* Reduced from 3rem */
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #fd7e14;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.feature-card .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #fd7e14;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .idaglob-page #idaglob-hero {
+        margin-top: 60px; /* Adjust for mobile header height */
+        padding: 8rem 2rem 2rem; /* Further reduced bottom padding for mobile */
+    }
+
+    .idaglob-page #idaglob-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+
+    .idaglob-page #idaglob-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .idaglob-page .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust nav-container for mobile to ensure FutureGlob logo is visible and positioned */
+    .idaglob-page .navbar .nav-container {
+        justify-content: space-between; /* Keep space-between for mobile */
+        padding-right: 0;
+    }
+
+    .idaglob-page .nav-link-futureglob-idaglob {
+        padding: 0.5rem 1rem; /* Add some padding for touch target */
+    }
+
+    .idaglob-page section {
+        padding: 2rem 0; /* Further reduced padding on mobile */
+    }
+
+    .idaglob-page .logo-display-container {
+        margin-top: 0.5rem; /* Adjust gap for mobile */
+    }
+
+    .idaglob-page #overview {
+        padding-top: 0.5rem; /* Further adjusted for tighter spacing from logo on mobile */
+    }
+
+    .feature-grid {
+        margin-top: 1.5rem; /* Adjust feature grid top margin for mobile */
+    }
+}

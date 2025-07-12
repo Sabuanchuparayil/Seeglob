@@ -1,0 +1,206 @@
+/* --- GlobForce Page Specific Styles --- */
+
+.globforce-page h1, .globforce-page h2, .globforce-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+.globforce-page #globforce-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    min-height: 80vh;
+    background-image: url('/globforce-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    position: relative;
+}
+
+/* Add a subtle overlay to ensure text readability while maintaining image brightness */
+.globforce-page #globforce-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    pointer-events: none;
+}
+
+.globforce-page #globforce-hero .hero-content {
+    background: none; /* Removed the white background */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    max-width: 800px;
+    box-shadow: none; /* Removed the shadow */
+}
+
+.globforce-page #globforce-hero .hero-tagline,
+.globforce-page #globforce-hero .hero-subtitle {
+    text-shadow: none;
+    color: var(--text-color);
+}
+
+.globforce-page #globforce-hero .hero-tagline {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Changed to white for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+    font-size: 3.5rem; /* Made slightly larger */
+}
+
+.globforce-page #globforce-hero .hero-subtitle {
+    font-weight: 400;
+    opacity: 1; /* Full opacity */
+    color: #ffffff; /* Changed to white */
+    font-size: 1.4rem; /* Slightly larger */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+    line-height: 1.6;
+    margin-bottom: 0; /* Removed bottom margin since we're removing the button */
+}
+
+.logo-display-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.globforce-logo-standalone {
+    height: 90px;
+    max-width: 300px;
+}
+
+.globforce-hero-logo {
+    height: 90px;
+    margin-bottom: 2rem;
+    background: transparent;
+}
+
+.globforce-page #overview {
+    background-color: var(--background-color);
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.globforce-page #features {
+    background-color: var(--surface-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Arranged into two columns */
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center content within the card */
+    display: flex; /* Use flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon, h3, p vertically */
+    align-items: center; /* Center horizontally in flex column */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1rem; /* Ensure consistent paragraph size */
+}
+
+.globforce-page #demo {
+    background-color: var(--background-color);
+}
+
+/* Ensure the Seeglob logo is visible and FutureGlob logo is next to it */
+.globforce-page .navbar .nav-container .nav-logo {
+    display: block; /* Make Seeglob logo visible */
+}
+
+/* Hide navigation elements on the GlobForce page */
+.globforce-page .navbar .nav-container .menu-toggle,
+.globforce-page .navbar .nav-container .nav-menu { /* Hide mobile menu and main nav menu */
+    display: none;
+}
+
+.globforce-page .navbar .nav-container {
+    justify-content: space-between; /* Space out logos */
+    padding-right: 2rem; /* Add padding consistent with general layout */
+}
+
+/* Style for the FutureGlob logo link in GlobForce header */
+.globforce-page .nav-link-futureglob-globforce {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.globforce-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+/* Make sure the header always has the default background and border from style.css */
+.globforce-page header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Reduce spacing between sections on GlobForce page */
+.globforce-page section {
+    padding: 3.5rem 0; /* Reduced from 4rem 0 */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .globforce-page #globforce-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+    
+    .globforce-page #globforce-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .globforce-page .feature-grid {
+        grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+    }
+
+    /* Adjust nav-container for mobile to ensure FutureGlob logo is visible and positioned */
+    .globforce-page .navbar .nav-container {
+        justify-content: space-between; /* Keep space-between for mobile */
+        padding-right: 0;
+    }
+
+    .globforce-page .nav-link-futureglob-globforce {
+        padding: 0.5rem 1rem; /* Add some padding for touch target */
+    }
+}

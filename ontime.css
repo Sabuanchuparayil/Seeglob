@@ -1,0 +1,225 @@
+/* --- OnTime Page Specific Styles --- */
+
+.ontime-page h1, 
+.ontime-page h2, 
+.ontime-page h3 {
+    font-family: 'Amaranth', sans-serif;
+}
+
+/* Adjust header to place logos on left and right */
+.ontime-page .navbar .nav-container .menu-toggle,
+.ontime-page .navbar .nav-container .nav-menu {
+    display: none; /* Keep hidden in CSS, though HTML elements were removed */
+}
+
+.ontime-page .navbar .nav-container {
+    justify-content: space-between; /* Change from center to space-between */
+    padding-right: 2rem; /* Add padding consistent with general layout */
+}
+
+/* Style for the FutureGlob logo link in OnTime header */
+.ontime-page .nav-link-futureglob-ontime {
+    display: flex; /* Ensures image is centered if its container has space */
+    align-items: center; /* Vertically align the image */
+    height: 100%; /* Take full height of navbar for vertical centering */
+    padding: 0; /* Remove padding inherited from nav-link */
+}
+
+.ontime-page .nav-futureglob-logo {
+    height: 35px; /* Consistent with index.html */
+    width: auto;
+    filter: none; /* Ensure no unwanted filters */
+}
+
+/* Ensure the header always has the default background and border from style.css */
+.ontime-page header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ontime-page #ontime-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8rem 2rem 4rem; 
+    margin-top: 70px; 
+}
+
+/* Adjusted image collage positioning */
+.image-collage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    filter: brightness(1.1);
+}
+
+.collage-row {
+    display: flex;
+    flex: 1;
+}
+
+.collage-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    filter: brightness(1.1);
+}
+
+.collage-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.ontime-page #ontime-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.ontime-page #ontime-hero .hero-tagline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.ontime-page #ontime-hero .hero-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* New section for OnTime logo positioning */
+.ontime-logo-section {
+    padding: 2rem 0; /* Reduced padding for less spacing */
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+/* Adjusted logo size to match other product pages */
+.ontime-logo-standalone {
+    height: 90px; /* Reduced from 240px */
+    max-width: 300px; /* Reduced from 800px */
+}
+
+/* Standardized spacing between sections */
+.ontime-page section {
+    padding: 4rem 0; /* Changed from 3rem 0 to 4rem 0 for consistency */
+}
+
+.ontime-page .logo-display-container {
+    /* padding: 2rem 0; */ 
+}
+
+.ontime-page #overview .container {
+    margin-top: 0; /* Removed negative margin for proper spacing */
+}
+
+/* Enhance feature card readability */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Arranged into two columns */
+    gap: 2rem;
+}
+
+.ontime-page .feature-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid #00aaff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0; /* Removed margin-bottom as gap handles spacing in grid */
+    text-align: center; /* Center content within the card */
+    display: flex; /* Use flexbox for icon and text alignment */
+    flex-direction: column; /* Stack icon, h3, p vertically */
+    align-items: center; /* Center horizontally in flex column */
+}
+
+.ontime-page .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
+
+.ontime-page .feature-card .feature-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    margin-bottom: 1rem; /* Space between icon and heading */
+}
+
+.ontime-page .feature-card h3 {
+    color: #00aaff;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem; /* Ensure consistent heading size */
+}
+
+.ontime-page .feature-card p {
+    font-size: 1rem; /* Ensure consistent paragraph size */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .ontime-page #ontime-hero {
+        margin-top: 60px; 
+    }
+    .ontime-page #ontime-hero .hero-tagline {
+        font-size: 2.5rem;
+    }
+    
+    .ontime-page #ontime-hero .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    /* Adjust overall section padding for smaller screens */
+    .ontime-page section {
+        padding: 2rem 0; 
+    }
+
+    /* Adjust logo section padding for smaller screens */
+    .ontime-logo-section {
+        padding: 1.5rem 0; 
+    }
+
+    .ontime-page .feature-grid {
+        grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+    }
+
+    /* Adjust nav-container for mobile to ensure FutureGlob logo is visible and positioned */
+    .ontime-page .navbar .nav-container {
+        justify-content: space-between; /* Keep space-between for mobile */
+        padding-right: 0;
+    }
+
+    .ontime-page .nav-link-futureglob-ontime {
+        padding: 0.5rem 1rem; /* Add some padding for touch target */
+    }
+}
